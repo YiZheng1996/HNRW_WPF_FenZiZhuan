@@ -157,13 +157,12 @@
                         StrokeStartLineCap="Flat" StrokeEndLineCap="Flat"
                         Data="M 0,0 A 14,15 0 0 0 15,15">
                         <Path.Stroke>
-                            <LinearGradientBrush MappingMode="Absolute"
-                                                 StartPoint="0,0" EndPoint="0,15">
-                                <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                                <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                                <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                                <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                                <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="#FFC0C6CE" Offset="0"/>
+                                <GradientStop Color="#FFD0D4DA" Offset="0.15"/>
+                                <GradientStop Color="#FFE0E2E6" Offset="0.30"/>
+                                <GradientStop Color="#FFC8CED6" Offset="0.50"/>
+                                <GradientStop Color="#FFA8B0BA" Offset="0.75"/>
                                 <GradientStop Color="#FF909098" Offset="1"/>
                             </LinearGradientBrush>
                         </Path.Stroke>
@@ -1267,19 +1266,6 @@
                 <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="484" Canvas.Top="203" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="597" Canvas.Top="204" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="648" Canvas.Top="203" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Image Grid.RowSpan="2" Panel.ZIndex="0" Stretch="Fill" Source="/Resources/中国中车logo.png" Width="108" Height="107" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-14" Canvas.Top="-20" RenderTransformOrigin="0.5,0.5" Opacity="0.75">
-                    <Image.Effect>
-                        <DropShadowEffect Color="#00C8E0" BlurRadius="12" ShadowDepth="0" Opacity="0.35"/>
-                    </Image.Effect>
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
             </Canvas>
             <Canvas>
                 <!-- 风机1 -->
