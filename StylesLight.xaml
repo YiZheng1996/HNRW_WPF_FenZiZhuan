@@ -4,148 +4,169 @@
 
     <!--
     ═══════════════════════════════════════════════════════════
-      分子筛转轮动态测试系统  —  浅色工业风样式库
+      分子筛转轮动态测试系统  —  深色工业3D风样式库
       文件：StylesLight.xaml
-      说明：纯外观样式，不改变任何功能逻辑与数据绑定
-            替换 Styles3D.xaml，所有 x:Key 保持一致
-      使用：在 App.xaml 的 MergedDictionaries 中将
-            Source="Styles3D.xaml" 改为 Source="StylesLight.xaml"
+      说明：深色工业大屏风格，参考沸石转轮工艺图配色
+            仅修改外观，不影响任何功能逻辑与数据绑定
     ═══════════════════════════════════════════════════════════
     -->
 
     <!-- ══════════════════════════════════════════
-         【公共画刷资源】统一色彩体系
-         浅色工业风：浅灰白背景、金属银灰管道、柔和投影
+         【主背景】深色宇宙工业感 - 中心聚光效果
     ══════════════════════════════════════════ -->
 
-    <!-- 主背景：浅灰白径向渐变（中心略亮、边缘略暗） -->
-    <RadialGradientBrush x:Key="MainBackgroundBrush" GradientOrigin="0.5,0.4" Center="0.5,0.4" RadiusX="0.7" RadiusY="0.7">
-        <GradientStop Color="#FFF5F6F8" Offset="0"/>
-        <GradientStop Color="#FFECEEF2" Offset="0.5"/>
-        <GradientStop Color="#FFE4E6EB" Offset="1"/>
+    <!-- 主背景：深蓝黑径向渐变，中心略亮，边缘深暗 -->
+    <RadialGradientBrush x:Key="MainBackgroundBrush" GradientOrigin="0.5,0.42" Center="0.5,0.42" RadiusX="0.75" RadiusY="0.75">
+        <GradientStop Color="#FF1E2840" Offset="0"/>
+        <GradientStop Color="#FF141D30" Offset="0.45"/>
+        <GradientStop Color="#FF0C1320" Offset="0.75"/>
+        <GradientStop Color="#FF080E18" Offset="1"/>
     </RadialGradientBrush>
 
-    <!-- 管道槽：浅灰凹槽底色 -->
+    <!-- ══════════════════════════════════════════
+         【管道配色】金属银灰3D管道（保持工业风）
+    ══════════════════════════════════════════ -->
+
+    <!-- 管道槽：深色凹槽底色 -->
     <LinearGradientBrush x:Key="PipeSlotBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFD0D4DA" Offset="0"/>
-        <GradientStop Color="#FFC0C6CE" Offset="0.5"/>
-        <GradientStop Color="#FFD0D4DA" Offset="1"/>
+        <GradientStop Color="#FF2A2E3A" Offset="0"/>
+        <GradientStop Color="#FF1C2030" Offset="0.5"/>
+        <GradientStop Color="#FF2A2E3A" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 管道3D渐变：金属银灰圆管截面光感 -->
+    <!-- 管道3D渐变：增强光泽感的金属银灰截面 -->
     <LinearGradientBrush x:Key="Pipe3DBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFB8BEC6" Offset="0"/>
-        <GradientStop Color="#FFE8EAEE" Offset="0.22"/>
-        <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-        <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-        <GradientStop Color="#FF808890" Offset="1"/>
+        <GradientStop Color="#FFA0A8B4" Offset="0"/>
+        <GradientStop Color="#FFECEFF4" Offset="0.20"/>
+        <GradientStop Color="#FFD0D4DC" Offset="0.50"/>
+        <GradientStop Color="#FF9098A4" Offset="0.80"/>
+        <GradientStop Color="#FF606870" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 管道高光：顶部白色反光条 -->
+    <!-- 管道高光：强化顶部白色反光条 -->
     <LinearGradientBrush x:Key="PipeHighlightBrush" StartPoint="0,0" EndPoint="1,0">
         <GradientStop Color="#00FFFFFF" Offset="0"/>
-        <GradientStop Color="#60FFFFFF" Offset="0.25"/>
-        <GradientStop Color="#60FFFFFF" Offset="0.75"/>
+        <GradientStop Color="#80FFFFFF" Offset="0.25"/>
+        <GradientStop Color="#80FFFFFF" Offset="0.75"/>
         <GradientStop Color="#00FFFFFF" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 数据卡片主体：白色微渐变 -->
+    <!-- ══════════════════════════════════════════
+         【数据卡片】深色玻璃质感面板
+    ══════════════════════════════════════════ -->
+
+    <!-- 数据卡片主体：深色蓝黑渐变（玻璃质感） -->
     <LinearGradientBrush x:Key="DataCardBodyBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFFFFFFF" Offset="0"/>
-        <GradientStop Color="#FFFBFBFC" Offset="0.5"/>
-        <GradientStop Color="#FFF5F6F8" Offset="1"/>
+        <GradientStop Color="#FF1E2D42" Offset="0"/>
+        <GradientStop Color="#FF18253A" Offset="0.5"/>
+        <GradientStop Color="#FF111C2E" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 数据卡片投影底色 -->
-    <SolidColorBrush x:Key="DataCardShadowBrush" Color="#FFD0D5DD"/>
+    <!-- 数据卡片投影底色：深青色 -->
+    <SolidColorBrush x:Key="DataCardShadowBrush" Color="#0A0E1A"/>
 
-    <!-- 标题栏渐变：白到浅灰 -->
+    <!-- ══════════════════════════════════════════
+         【标题栏】深色金属工业标题
+    ══════════════════════════════════════════ -->
+
+    <!-- 标题栏渐变：深蓝到深蓝黑 -->
     <LinearGradientBrush x:Key="TitleBarBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFFFFFFF" Offset="0"/>
-        <GradientStop Color="#FFF5F6F8" Offset="0.6"/>
-        <GradientStop Color="#FFECEEF2" Offset="1"/>
+        <GradientStop Color="#FF243050" Offset="0"/>
+        <GradientStop Color="#FF1A2440" Offset="0.5"/>
+        <GradientStop Color="#FF101830" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 标题栏顶部高光线：浅蓝灰色横线 -->
+    <!-- 标题栏顶部高光线：亮青色/电光蓝 -->
     <LinearGradientBrush x:Key="TitleTopHighlightBrush" StartPoint="0,0" EndPoint="1,0">
-        <GradientStop Color="#00A0B0C0" Offset="0"/>
-        <GradientStop Color="#40A0B0C0" Offset="0.2"/>
-        <GradientStop Color="#60A0B0C0" Offset="0.5"/>
-        <GradientStop Color="#40A0B0C0" Offset="0.8"/>
-        <GradientStop Color="#00A0B0C0" Offset="1"/>
+        <GradientStop Color="#0000D4FF" Offset="0"/>
+        <GradientStop Color="#6000C8E8" Offset="0.15"/>
+        <GradientStop Color="#A000E8FF" Offset="0.5"/>
+        <GradientStop Color="#6000C8E8" Offset="0.85"/>
+        <GradientStop Color="#0000D4FF" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 扫描线纹理：浅色主题下设为全透明（不可见） -->
+    <!-- ══════════════════════════════════════════
+         【扫描线纹理】工业显示器扫描线效果
+    ══════════════════════════════════════════ -->
+
+    <!-- 扫描线：深色主题下细密水平线条，增加HMI质感 -->
     <DrawingBrush x:Key="ScanLineBrush" TileMode="Tile"
-                  Viewport="0,0,1,0.0125" ViewportUnits="RelativeToBoundingBox">
+                  Viewport="0,0,1,0.005" ViewportUnits="RelativeToBoundingBox"
+                  Opacity="0.18">
         <DrawingBrush.Drawing>
-            <GeometryDrawing Brush="#00000000">
-                <GeometryDrawing.Geometry>
-                    <RectangleGeometry Rect="0,0,1,0.5"/>
-                </GeometryDrawing.Geometry>
-            </GeometryDrawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="#14001824">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0,1,0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="#0800101C">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0.5,1,0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
         </DrawingBrush.Drawing>
     </DrawingBrush>
 
     <!-- 管道槽外层背景 -->
     <LinearGradientBrush x:Key="PipeOuterSlotBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFD8DCE2" Offset="0"/>
-        <GradientStop Color="#FFC8CCD4" Offset="0.5"/>
-        <GradientStop Color="#FFD8DCE2" Offset="1"/>
+        <GradientStop Color="#FF2E3444" Offset="0"/>
+        <GradientStop Color="#FF1E2434" Offset="0.5"/>
+        <GradientStop Color="#FF2E3444" Offset="1"/>
     </LinearGradientBrush>
 
     <!-- ══════════════════════════════════════════
-         【DropShadowEffect 资源】
-         浅色主题下统一使用柔和灰色投影，取消发光
+         【DropShadowEffect 资源】深色主题增强光效
     ══════════════════════════════════════════ -->
 
-    <!-- 设备高亮：柔和蓝色投影（替换原青色发光） -->
+    <!-- 设备高亮：强烈青色发光（深色主题下非常显眼） -->
     <DropShadowEffect x:Key="CyanGlowEffect"
-                      Color="#4A90D9"
-                      BlurRadius="8"
-                      ShadowDepth="1"
-                      Opacity="0.25"/>
+                      Color="#00E5FF"
+                      BlurRadius="16"
+                      ShadowDepth="0"
+                      Opacity="0.55"/>
 
-    <!-- 正常状态指示：柔和绿色投影 -->
+    <!-- 正常状态：明亮绿色发光 -->
     <DropShadowEffect x:Key="GreenGlowEffect"
-                      Color="#48BB78"
-                      BlurRadius="6"
-                      ShadowDepth="1"
-                      Opacity="0.20"/>
+                      Color="#00FF80"
+                      BlurRadius="12"
+                      ShadowDepth="0"
+                      Opacity="0.50"/>
 
-    <!-- 标题文字：极淡投影（不再发光） -->
+    <!-- 标题文字：青色光晕 -->
     <DropShadowEffect x:Key="TitleGlowEffect"
-                      Color="#000000"
-                      BlurRadius="4"
-                      ShadowDepth="1"
-                      Opacity="0.08"/>
-
-    <!-- 下投影：柔和灰色卡片投影 -->
-    <DropShadowEffect x:Key="CardDropShadow"
-                      Color="#FF808890"
+                      Color="#00C8E8"
                       BlurRadius="8"
-                      ShadowDepth="2"
-                      Direction="270"
-                      Opacity="0.15"/>
+                      ShadowDepth="0"
+                      Opacity="0.60"/>
 
-    <!-- 面板内阴影：柔和灰色 -->
+    <!-- 卡片投影：青蓝色深度阴影（3D立体感） -->
+    <DropShadowEffect x:Key="CardDropShadow"
+                      Color="#003050"
+                      BlurRadius="12"
+                      ShadowDepth="3"
+                      Direction="270"
+                      Opacity="0.70"/>
+
+    <!-- 面板内阴影：深色内嵌 -->
     <DropShadowEffect x:Key="PanelInsetShadow"
-                      Color="#FF808890"
-                      BlurRadius="4"
-                      ShadowDepth="1"
+                      Color="#00182A"
+                      BlurRadius="6"
+                      ShadowDepth="2"
                       Direction="315"
-                      Opacity="0.12"/>
+                      Opacity="0.60"/>
 
     <!-- ══════════════════════════════════════════
          【TextBox 数据卡片样式】
+         深色玻璃面板 + 左侧青色发光边框 + 3D立体投影
          功能保留：IsReadOnly、Text绑定、Name均不变
-         外观：白色卡片 + 左侧蓝灰色边 + 柔和投影
     ══════════════════════════════════════════ -->
     <Style TargetType="TextBox">
         <Setter Property="IsReadOnly" Value="True"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="Foreground"     Value="#1A365D"/>
+        <Setter Property="Foreground"     Value="#00D4FF"/>
         <Setter Property="FontSize"       Value="11"/>
         <Setter Property="TextAlignment"  Value="Center"/>
         <Setter Property="FontFamily" Value="Arial"/>
@@ -156,43 +177,65 @@
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Grid>
-                        <!-- 层1：底部投影（右下偏移2px，制造厚度感） -->
+                        <!-- 层1：底部深色投影（右下偏移3px，强化3D厚度感） -->
                         <Border
                             Width="{TemplateBinding Width}"
                             Height="{TemplateBinding Height}"
-                            Margin="2,2,0,0"
+                            Margin="3,3,0,0"
                             CornerRadius="3"
-                            Background="{StaticResource DataCardShadowBrush}"
-                            Opacity="0.50"/>
+                            Opacity="0.80">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#FF001828" Offset="0"/>
+                                    <GradientStop Color="#FF00101E" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
 
-                        <!-- 层2：左侧彩色立体边（蓝灰色调） -->
+                        <!-- 层2：左侧青色发光立体边 -->
                         <Border
                             Width="3"
                             Margin="0,1,0,1"
                             HorizontalAlignment="Left"
                             CornerRadius="2,0,0,2"
-                            Opacity="0.9">
+                            Opacity="0.95">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <GradientStop Color="#FF5A7DA8" Offset="0"/>
-                                    <GradientStop Color="#FF3D5A80" Offset="1"/>
+                                    <GradientStop Color="#FF00E5FF" Offset="0"/>
+                                    <GradientStop Color="#FF0090C0" Offset="0.5"/>
+                                    <GradientStop Color="#FF006890" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
+                            <Border.Effect>
+                                <DropShadowEffect Color="#00E5FF" BlurRadius="6" ShadowDepth="0" Opacity="0.8"/>
+                            </Border.Effect>
                         </Border>
 
-                        <!-- 层3：主体卡片（白色+浅灰边框） -->
+                        <!-- 层3：主体深色玻璃卡片 + 细边框 -->
                         <Border
-                            Margin="0,0,2,2"
+                            Margin="0,0,3,3"
                             CornerRadius="0,3,3,0"
                             BorderThickness="0,0.8,0.8,0"
-                            BorderBrush="#30607890"
-                            Background="{StaticResource DataCardBodyBrush}">
-                            <!-- 层4：顶部高光线 -->
+                            BorderBrush="#3000A8CC">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FF1E2D42" Offset="0"/>
+                                    <GradientStop Color="#FF18253A" Offset="0.5"/>
+                                    <GradientStop Color="#FF111C2E" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <!-- 层4：顶部青色高光线 -->
                             <Border
                                 BorderThickness="0,0.8,0,0"
                                 CornerRadius="0,3,0,0"
-                                Margin="0"
-                                BorderBrush="#18A0B0C0">
+                                Margin="0">
+                                <Border.BorderBrush>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#0000D4FF" Offset="0"/>
+                                        <GradientStop Color="#5000D4FF" Offset="0.5"/>
+                                        <GradientStop Color="#0000D4FF" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.BorderBrush>
                                 <!-- 内容区域 -->
                                 <ScrollViewer
                                     x:Name="PART_ContentHost"
