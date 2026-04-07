@@ -31,104 +31,192 @@
                 <!-- 内容区域 -->
             </Grid.RowDefinitions>
 
-            <!-- 主背景：深宇宙黑 + 聚光渐变 -->
+            <!-- 主背景：珍珠白径向渐变 -->
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="0"
            Fill="{StaticResource MainBackgroundBrush}"/>
 
-            <!-- 背景透视底部暗角（增加3D纵深感）-->
-            <Rectangle Grid.RowSpan="2" Panel.ZIndex="0" IsHitTestVisible="False">
-                <Rectangle.Fill>
-                    <RadialGradientBrush GradientOrigin="0.5,1.0" Center="0.5,1.0" RadiusX="0.7" RadiusY="0.5">
-                        <GradientStop Color="#30000A14" Offset="0"/>
-                        <GradientStop Color="#00000A14" Offset="1"/>
-                    </RadialGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-
-            <!-- 扫描线纹理叠加 -->
+            <!-- 背景点阵纹理（工程图纸技术感）-->
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="1"
            IsHitTestVisible="False"
            Fill="{StaticResource ScanLineBrush}"
            Opacity="1"/>
 
             <Image Grid.RowSpan="2" Panel.ZIndex="0" Stretch="UniformToFill" Source="Resources/Top and bottom frame.png" Width="800" Height="450" Opacity="0" Margin="4,4,-4,-4"/>
-            <!-- 定义行布局 -->
-            <!-- 标题栏 Border（放置在第一行） -->
-            <Border Height="40" VerticalAlignment="Top"
-        Background="{StaticResource TitleBarBrush}"
-        Effect="{StaticResource CardDropShadow}">
+
+            <!-- ═══════════════════════════════════════
+                 标题栏：专业工业白 + 蓝钢顶线 + 3D深度
+            ════════════════════════════════════════ -->
+            <Border Height="44" VerticalAlignment="Top"
+                    Background="{StaticResource TitleBarBrush}"
+                    Effect="{StaticResource CardDropShadow}">
                 <Grid>
-                    <!-- 顶部电光青色高光线 -->
-                    <Border Height="2" VerticalAlignment="Top"
-                Background="{StaticResource TitleTopHighlightBrush}"/>
-                    <!-- 底部深色分割线 -->
-                    <Border Height="1" VerticalAlignment="Bottom"
-                Background="#3000A8CC"/>
 
-                    <!-- 左侧竖向装饰条（3D深度感）-->
-                    <Border Width="4" HorizontalAlignment="Left" Margin="0,2,0,2" CornerRadius="2,0,0,2">
+                    <!-- 顶部蓝钢色高光线（3mm） -->
+                    <Border Height="3" VerticalAlignment="Top"
+                            Background="{StaticResource TitleTopHighlightBrush}"/>
+
+                    <!-- 底部分割线（细灰） -->
+                    <Border Height="1" VerticalAlignment="Bottom">
                         <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="#FF00E5FF" Offset="0"/>
-                                <GradientStop Color="#FF0090C0" Offset="0.5"/>
-                                <GradientStop Color="#FF005580" Offset="1"/>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#00C0CCD8" Offset="0"/>
+                                <GradientStop Color="#60C0CCD8" Offset="0.2"/>
+                                <GradientStop Color="#80C0CCD8" Offset="0.5"/>
+                                <GradientStop Color="#60C0CCD8" Offset="0.8"/>
+                                <GradientStop Color="#00C0CCD8" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Border.Effect>
-                            <DropShadowEffect Color="#00E5FF" BlurRadius="8" ShadowDepth="0" Opacity="0.9"/>
-                        </Border.Effect>
                     </Border>
 
-                    <!-- 右侧竖向装饰条（对称）-->
-                    <Border Width="4" HorizontalAlignment="Right" Margin="0,2,0,2" CornerRadius="0,2,2,0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="#FF00E5FF" Offset="0"/>
-                                <GradientStop Color="#FF0090C0" Offset="0.5"/>
-                                <GradientStop Color="#FF005580" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <Border.Effect>
-                            <DropShadowEffect Color="#00E5FF" BlurRadius="8" ShadowDepth="0" Opacity="0.9"/>
-                        </Border.Effect>
-                    </Border>
-
-                    <!-- 左侧 LOGO 区域 -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,0,0,0">
-                        <Image Source="Resources/zclogo.png" Height="22" Width="22" RenderOptions.BitmapScalingMode="HighQuality"/>
-                        <TextBlock Text="江苏中车云汇科技有限公司"
-                                   FontSize="9"
-                                   FontWeight="Normal"
-                                   VerticalAlignment="Center"
-                                   Margin="6,0,0,0"
-                                   Foreground="#8090B8">
-                        </TextBlock>
+                    <!-- 左侧：公司英文名（小字，专业感） -->
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left"
+                                VerticalAlignment="Center" Margin="14,4,0,4">
+                        <TextBlock Text="JIANGSU CRRC YUNHUI TECHNOLOGY"
+                                   FontSize="7" FontWeight="Normal"
+                                   Foreground="#7090B0"/>
+                        <TextBlock Text="分子筛转轮 · 动态测试系统"
+                                   FontSize="8" FontWeight="Normal"
+                                   Foreground="#4A6A8A" Margin="0,1,0,0"/>
                     </StackPanel>
 
-                    <!-- 右侧版本/时间占位 -->
-                    <TextBlock Text="VOC处理系统监控大屏"
-                               FontSize="8"
-                               HorizontalAlignment="Right"
-                               VerticalAlignment="Center"
-                               Margin="0,0,14,0"
-                               Foreground="#405070"/>
-
-                    <!-- 居中主标题文字 -->
+                    <!-- 居中：主标题 -->
                     <TextBlock Text="分子筛转轮动态测试系统看板"
-                   FontSize="13"
-                   FontWeight="Bold"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Foreground="#E0F4FF">
+                               FontSize="14"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="#1A2A4A">
                         <TextBlock.Effect>
-                            <DropShadowEffect Color="#00C8E8" BlurRadius="10"
-                                  ShadowDepth="0" Opacity="0.80"/>
+                            <DropShadowEffect Color="#A0B8D0" BlurRadius="4"
+                                              ShadowDepth="1" Opacity="0.25"/>
                         </TextBlock.Effect>
                     </TextBlock>
+
+                    <!-- 右侧：系统标签 -->
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right"
+                                VerticalAlignment="Center" Margin="0,4,14,4">
+                        <TextBlock Text="VOC废气处理监控"
+                                   FontSize="8" FontWeight="Normal"
+                                   HorizontalAlignment="Right"
+                                   Foreground="#7090B0"/>
+                        <TextBlock Text="Zeolite Rotor System"
+                                   FontSize="7" FontWeight="Normal"
+                                   HorizontalAlignment="Right"
+                                   Foreground="#90A8C0" Margin="0,1,0,0"/>
+                    </StackPanel>
                 </Grid>
             </Border>
 
             <!-- 其他内容（放置在第二行） -->
+
+            <!-- ═══════════════════════════════════════
+                 区域图例（参考分子筛转轮工艺图配色）
+                 纯装饰层，不影响任何功能
+            ════════════════════════════════════════ -->
+            <Canvas Grid.Row="1" Panel.ZIndex="2">
+
+                <!-- ─── 区域图例卡片（右上角） ─── -->
+                <Border Canvas.Left="630" Canvas.Top="8"
+                        Width="148" Height="70"
+                        CornerRadius="5"
+                        BorderThickness="0.8"
+                        BorderBrush="#28607898">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#F8FFFFFE" Offset="0"/>
+                            <GradientStop Color="#EEFAFBFD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="#8090A8" BlurRadius="8" ShadowDepth="2" Opacity="0.18"/>
+                    </Border.Effect>
+                    <StackPanel Margin="8,6,8,6" VerticalAlignment="Center">
+                        <!-- 脱附区 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
+                            <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#FFE53935" Offset="0"/>
+                                        <GradientStop Color="#FFD32F2F" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Text="脱附区  Desorption Zone"
+                                       FontSize="7" VerticalAlignment="Center"
+                                       Foreground="#2C3A4A"/>
+                        </StackPanel>
+                        <!-- 冷却区 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
+                            <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#FF1976D2" Offset="0"/>
+                                        <GradientStop Color="#FF1565C0" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Text="冷却区  Cooling Zone"
+                                       FontSize="7" VerticalAlignment="Center"
+                                       Foreground="#2C3A4A"/>
+                        </StackPanel>
+                        <!-- 吸附区 -->
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#FFD7CCC8" Offset="0"/>
+                                        <GradientStop Color="#FFBCAAA4" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Text="吸附区  Adsorption Zone"
+                                       FontSize="7" VerticalAlignment="Center"
+                                       Foreground="#2C3A4A"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- ─── 分子筛转轮区域标注 ─── -->
+                <!-- 脱附区标注（上方） -->
+                <Border Canvas.Left="468" Canvas.Top="155"
+                        CornerRadius="3" Padding="5,2">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#18E53935" Offset="0"/>
+                            <GradientStop Color="#0CE53935" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock Text="脱附区" FontSize="7" FontWeight="SemiBold"
+                               Foreground="#C62828"/>
+                </Border>
+
+                <!-- 冷却区标注（右侧） -->
+                <Border Canvas.Left="555" Canvas.Top="200"
+                        CornerRadius="3" Padding="5,2">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#181976D2" Offset="0"/>
+                            <GradientStop Color="#0C1976D2" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock Text="冷却区" FontSize="7" FontWeight="SemiBold"
+                               Foreground="#1565C0"/>
+                </Border>
+
+                <!-- 吸附区标注（下方） -->
+                <Border Canvas.Left="395" Canvas.Top="345"
+                        CornerRadius="3" Padding="5,2">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#18795548" Offset="0"/>
+                            <GradientStop Color="#0C795548" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock Text="吸附区" FontSize="7" FontWeight="SemiBold"
+                               Foreground="#4E342E"/>
+                </Border>
+
+            </Canvas>
 
             <Canvas Margin="31,301,526,10" Grid.Row="1"/>
             <Canvas>
@@ -1516,19 +1604,19 @@
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="170" />
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附入口温度" 
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附入口温度" 
                          Width="40"
                          Height="16"
                          Margin="6,3,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6"                          Width="40"
+                <TextBox Foreground="#1A3A5A" FontSize="6"                          Width="40"
                          Height="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附入口湿度" Margin="46,3,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="TT301" Foreground="#00D4FF"                          Width="40"
+                <TextBox Name="TT301" Foreground="#1A3A5A"                          Width="40"
                          Height="16" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="6,18,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="RH301" Foreground="#00D4FF"                          Width="40"
+                <TextBox Name="RH301" Foreground="#1A3A5A"                          Width="40"
                          Height="16" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="46,18,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center"                          Width="40"
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center"                          Width="40"
                          Height="16" HorizontalContentAlignment="Center" Text="吸附入口压力" Margin="86,3,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="PT301" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"                          Width="40"
+                <TextBox Name="PT301" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"                          Width="40"
                          Height="16" Text="" Margin="86,18,0,0"     HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Line 
                   X1="0" Y1="0" 
@@ -1608,10 +1696,10 @@
                     <RowDefinition Height="1.833"/>
                     <RowDefinition Height="108.417"/>
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Text="冷却温度(°)" Margin="0,14,214,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="冷却湿度" Margin="70,14,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="TT401" Foreground="#00D4FF" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="26,29,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="RH401" Foreground="#00D4FF" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="70,29,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Text="冷却温度(°)" Margin="0,14,214,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="冷却湿度" Margin="70,14,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="TT401" Foreground="#1A3A5A" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="26,29,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="RH401" Foreground="#1A3A5A" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="70,29,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                 <Line 
                 X1="0" Y1="0" 
@@ -1723,8 +1811,8 @@
                         </TransformGroup>
                     </Line.RenderTransform>
                 </Line>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="136,0,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="PDT801" Foreground="#00D4FF" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="136,14,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="136,0,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="PDT801" Foreground="#1A3A5A" FontSize="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="136,14,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
             <Grid Margin="599,108,-79,30" Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -1733,8 +1821,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="170" />
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="冷却出口温度" Margin="44,71,0,0"     HorizontalAlignment="Left" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox x:Name="TT601" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="44,87,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="冷却出口温度" Margin="44,71,0,0"     HorizontalAlignment="Left" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox x:Name="TT601" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="44,87,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Line 
            X1="0" Y1="0" 
            X2="{Binding ActualWidth, RelativeSource={RelativeSource Mode=Self}}" 
@@ -1767,10 +1855,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="170" />
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附入口温度(°)" Margin="0,71,133,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox Name="TT602" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="107,86,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附入口温度(°)" Margin="0,71,85,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox x:Name="TT603" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="155,86,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附入口温度(°)" Margin="0,71,133,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox Name="TT602" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="107,86,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附入口温度(°)" Margin="0,71,85,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox x:Name="TT603" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="155,86,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                 <Line 
                 X1="0" Y1="0" 
@@ -1887,8 +1975,8 @@
                         </TransformGroup>
                     </Line.RenderTransform>
                 </Line>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="0,66,201,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox x:Name="PDT803" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="39,81,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="0,66,201,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox x:Name="PDT803" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="39,81,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Line 
                 X1="0" Y1="0" 
                 X2="360" 
@@ -1958,8 +2046,8 @@
                         </TransformGroup>
                     </Line.RenderTransform>
                 </Line>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="0,102,201,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
-                <TextBox x:Name="PDT802_" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="39,117,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="0,102,201,0"     HorizontalAlignment="Right" Width="40" Height="16" VerticalAlignment="Top"/>
+                <TextBox x:Name="PDT802_" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="39,117,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
 
 
@@ -1970,12 +2058,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="170" />
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口温度(°)" Margin="108,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口湿度" Margin="149,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="TT501" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="108,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="RH501" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="149,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口压力" Margin="192,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="PT501" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="192,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口温度(°)" Margin="108,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口湿度" Margin="149,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="TT501" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="108,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="RH501" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="149,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="吸附出口压力" Margin="192,5,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="PT501" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="192,20,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Line 
                 X1="0" Y1="1" 
                 X2="360" 
@@ -2111,8 +2199,8 @@
                         </TransformGroup>
                     </Line.RenderTransform>
                 </Line>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压(°)" Margin="25,18,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="PDT501" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="25,33,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压(°)" Margin="25,18,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="PDT501" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="25,33,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
             <Grid Margin="235,272,215,-34" Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -2122,12 +2210,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="170" />
                 </Grid.RowDefinitions>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口温度(°)" Margin="-12,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口湿度" Margin="27,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                <TextBox Name="TT701" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="-12,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="RH701" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="27,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口压力" Margin="16,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                <TextBox Name="PT701" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="16,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口温度(°)" Margin="-12,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口湿度" Margin="27,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox Name="TT701" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="-12,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="RH701" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="27,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="脱附出口压力" Margin="16,-27,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="PT701" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="16,-12,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
                 <Line  
   X1="0" Y1="0" 
   X2="360" 
@@ -2289,8 +2377,8 @@
                         </TransformGroup>
                     </Line.RenderTransform>
                 </Line>
-                <TextBox Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="74,25,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
-                <TextBox Name="PDT701" Foreground="#00D4FF" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="74,40,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="差压" Margin="74,25,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="PDT701" Foreground="#1A3A5A" FontSize="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="" Margin="74,40,0,0"     Width="40" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
             </Grid>
 
         </Grid>
