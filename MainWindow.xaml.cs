@@ -263,9 +263,9 @@ public partial class MainWindow : Window
         }
 
         // 为第一个扇形创建材质 脱附区（暖橙色，与参考图一致）
-        var fan1Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(230, 150, 60)));   // 暖橙色
-        var fan1Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 255, 180, 80)));  // 极微弱自发光
-        var fan1Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(80, 255, 220, 150)), 40);
+        var fan1Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(198, 40, 40)));   // 暖橙色
+        var fan1Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 220, 60, 60)));  // 极微弱自发光
+        var fan1Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(80, 255, 120, 120)), 40);
         var fan1Group = new MaterialGroup();
         fan1Group.Children.Add(fan1Diffuse);
         fan1Group.Children.Add(fan1Emissive);
@@ -328,9 +328,9 @@ public partial class MainWindow : Window
         }
 
         // 为第二个扇形创建不同颜色的材质 冷却区（冷蓝色，与参考图一致）
-        var fan2Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(80, 150, 210)));   // 冷蓝色
-        var fan2Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 100, 180, 255)));  // 极微弱自发光
-        var fan2Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(80, 150, 210, 255)), 50);
+        var fan2Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(21, 101, 192)));   // 冷蓝色
+        var fan2Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 50, 120, 220)));  // 极微弱自发光
+        var fan2Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(80, 100, 170, 255)), 50);
         var fan2Group = new MaterialGroup();
         fan2Group.Children.Add(fan2Diffuse);
         fan2Group.Children.Add(fan2Emissive);
@@ -393,9 +393,9 @@ public partial class MainWindow : Window
         }
 
         // 为第三个扇形创建不同颜色的材质 吸附区（柔和红色，浅色主题适配）
-        var fan3Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(200, 80, 80)));    // 柔和红色
-        var fan3Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 255, 100, 100)));  // 极微弱自发光
-        var fan3Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(60, 255, 150, 150)), 35);
+        var fan3Diffuse = new DiffuseMaterial(new SolidColorBrush(Color.FromRgb(210, 198, 165)));    // 柔和红色
+        var fan3Emissive = new EmissiveMaterial(new SolidColorBrush(Color.FromArgb(10, 230, 210, 170)));  // 极微弱自发光
+        var fan3Specular = new SpecularMaterial(new SolidColorBrush(Color.FromArgb(60, 240, 220, 180)), 35);
         var fan3Group = new MaterialGroup();
         fan3Group.Children.Add(fan3Diffuse);
         fan3Group.Children.Add(fan3Specular);

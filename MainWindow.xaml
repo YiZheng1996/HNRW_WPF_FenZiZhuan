@@ -31,15 +31,15 @@
                 <!-- 内容区域 -->
             </Grid.RowDefinitions>
 
-            <!-- 主背景：珍珠白径向渐变 -->
+            <!-- 主背景：珍珠白径向渐变 --><!--
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="0"
-           Fill="{StaticResource MainBackgroundBrush}"/>
+           Fill="{StaticResource MainBackgroundBrush}"/>-->
 
-            <!-- 背景点阵纹理（工程图纸技术感）s-->
+            <!-- 背景点阵纹理（工程图纸技术感）s--><!--
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="1"
            IsHitTestVisible="False"
            Fill="{StaticResource ScanLineBrush}"
-           Opacity="1"/>
+           Opacity="1"/>-->
 
             <Image Grid.RowSpan="2" Panel.ZIndex="0" Stretch="UniformToFill" Source="Resources/Top and bottom frame.png" Width="800" Height="450" Opacity="0" Margin="4,4,-4,-4"/>
 
@@ -153,8 +153,8 @@
                             <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
                                 <Border.Background>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                        <GradientStop Color="#FFD7CCC8" Offset="0"/>
-                                        <GradientStop Color="#FFBCAAA4" Offset="1"/>
+                                        <GradientStop Color="#FFD2C6A5" Offset="0"/>
+                                        <GradientStop Color="#FFC4B68A" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
                             </Border>

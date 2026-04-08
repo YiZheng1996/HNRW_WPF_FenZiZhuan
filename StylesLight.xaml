@@ -16,30 +16,31 @@
     ══════════════════════════════════════════ -->
 
     <!-- 主背景：冷白径向渐变，中心略亮形成自然聚焦 -->
-    <RadialGradientBrush x:Key="MainBackgroundBrush" GradientOrigin="0.5,0.42" Center="0.5,0.42" RadiusX="0.80" RadiusY="0.80">
-        <GradientStop Color="#FFFAFBFD" Offset="0"/>
-        <GradientStop Color="#FFF2F4F8" Offset="0.50"/>
-        <GradientStop Color="#FFE8EBF0" Offset="1"/>
+    <RadialGradientBrush x:Key="MainBackgroundBrush" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="1.0" RadiusY="1.0">
+        <GradientStop Color="#FFFFFFFF" Offset="0"/>
+        <GradientStop Color="#FFF7F7F7" Offset="0.6"/>
+        <GradientStop Color="#FFEFEFEF" Offset="1"/>
     </RadialGradientBrush>
+
 
     <!-- ══════════════════════════════════════════
          【管道配色】金属银灰3D圆管（工程真实感）
     ══════════════════════════════════════════ -->
 
-    <!-- 管道槽：浅灰凹槽底色 -->
+    <!-- 管道槽：浅灰底色 -->
     <LinearGradientBrush x:Key="PipeSlotBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFD4D8E0" Offset="0"/>
-        <GradientStop Color="#FFC4C8D0" Offset="0.5"/>
-        <GradientStop Color="#FFD4D8E0" Offset="1"/>
+        <GradientStop Color="#FFD0D0D0" Offset="0"/>
+        <GradientStop Color="#FFC0C0C0" Offset="0.5"/>
+        <GradientStop Color="#FFD0D0D0" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 管道3D渐变：高光增强的金属截面效果 -->
+    <!-- 管道3D渐变：中灰色金属管 -->
     <LinearGradientBrush x:Key="Pipe3DBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#FFB0B8C2" Offset="0"/>
-        <GradientStop Color="#FFECEFF4" Offset="0.20"/>
-        <GradientStop Color="#FFD2D6DE" Offset="0.52"/>
-        <GradientStop Color="#FF9CA4AE" Offset="0.82"/>
-        <GradientStop Color="#FF78828C" Offset="1"/>
+        <GradientStop Color="#FF888888" Offset="0"/>
+        <GradientStop Color="#FFB8B8B8" Offset="0.20"/>
+        <GradientStop Color="#FF787878" Offset="0.55"/>
+        <GradientStop Color="#FF585858" Offset="0.82"/>
+        <GradientStop Color="#FF404040" Offset="1"/>
     </LinearGradientBrush>
 
     <!-- 管道高光：顶部白色反光条 -->
@@ -54,35 +55,27 @@
          【数据卡片】白色立体卡片（多层深度感）
     ══════════════════════════════════════════ -->
 
-    <!-- 数据卡片主体：纯白微渐变 -->
-    <LinearGradientBrush x:Key="DataCardBodyBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+    <!-- 数据卡片主体：纯白 -->
+    <LinearGradientBrush x:Key="DataCardBodyBrush" StartPoint="0,0" EndPoint="0,1">
         <GradientStop Color="#FFFFFFFF" Offset="0"/>
-        <GradientStop Color="#FFFCFCFE" Offset="0.5"/>
-        <GradientStop Color="#FFF5F7FB" Offset="1"/>
+        <GradientStop Color="#FFF8F8F8" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 数据卡片投影底色：蓝灰色（立体底面） -->
-    <SolidColorBrush x:Key="DataCardShadowBrush" Color="#C8D2DE"/>
+    <!-- 卡片投影：浅灰 -->
+    <SolidColorBrush x:Key="DataCardShadowBrush" Color="#FFD0D0D0"/>
 
     <!-- ══════════════════════════════════════════
          【标题栏】专业工业标题（浅蓝钢色调）
     ══════════════════════════════════════════ -->
 
-    <!-- 标题栏渐变：纯白到蓝灰白 -->
-    <LinearGradientBrush x:Key="TitleBarBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+    <!-- 标题栏背景 -->
+    <LinearGradientBrush x:Key="TitleBarBrush" StartPoint="0,0" EndPoint="0,1">
         <GradientStop Color="#FFFFFFFF" Offset="0"/>
-        <GradientStop Color="#FFF4F7FC" Offset="0.55"/>
-        <GradientStop Color="#FFEAEFF7" Offset="1"/>
+        <GradientStop Color="#FFF0F0F0" Offset="1"/>
     </LinearGradientBrush>
 
-    <!-- 标题栏顶部高光线：蓝钢色横向渐变 -->
-    <LinearGradientBrush x:Key="TitleTopHighlightBrush" StartPoint="0,0" EndPoint="1,0">
-        <GradientStop Color="#001565C0" Offset="0"/>
-        <GradientStop Color="#801565C0" Offset="0.20"/>
-        <GradientStop Color="#B01976D2" Offset="0.50"/>
-        <GradientStop Color="#801565C0" Offset="0.80"/>
-        <GradientStop Color="#001565C0" Offset="1"/>
-    </LinearGradientBrush>
+    <!-- 标题顶线：改为深灰（图片中无彩色装饰线） -->
+    <SolidColorBrush x:Key="TitleTopHighlightBrush" Color="#FF505050"/>
 
     <!-- ══════════════════════════════════════════
          【背景纹理】细密技术点阵（工程图纸感）
@@ -112,12 +105,12 @@
          【DropShadowEffect 资源】浅色主题精准阴影
     ══════════════════════════════════════════ -->
 
-    <!-- 设备高亮：蓝钢色柔和投影 -->
+    <!-- 投影效果：灰色 -->
     <DropShadowEffect x:Key="CyanGlowEffect"
-                      Color="#1565C0"
-                      BlurRadius="10"
-                      ShadowDepth="1"
-                      Opacity="0.30"/>
+                  Color="#808080"
+                  BlurRadius="6"
+                  ShadowDepth="2"
+                  Opacity="0.4"/>
 
     <!-- 正常状态：绿色柔和投影 -->
     <DropShadowEffect x:Key="GreenGlowEffect"
@@ -133,13 +126,12 @@
                       ShadowDepth="1"
                       Opacity="0.20"/>
 
-    <!-- 卡片标准投影：蓝灰色 3D 立体感 -->
     <DropShadowEffect x:Key="CardDropShadow"
-                      Color="#8090A8"
-                      BlurRadius="10"
-                      ShadowDepth="2"
-                      Direction="270"
-                      Opacity="0.22"/>
+                  Color="#A0A0A0"
+                  BlurRadius="8"
+                  ShadowDepth="3"
+                  Direction="270"
+                  Opacity="0.5"/>
 
     <!-- 面板内阴影：柔和灰蓝 -->
     <DropShadowEffect x:Key="PanelInsetShadow"
@@ -187,9 +179,9 @@
                             Opacity="0.90">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <GradientStop Color="#FF1976D2" Offset="0"/>
-                                    <GradientStop Color="#FF1565C0" Offset="0.5"/>
-                                    <GradientStop Color="#FF0D47A1" Offset="1"/>
+                                    <GradientStop Color="#FF606060" Offset="0"/>
+                                    <GradientStop Color="#FF505050" Offset="0.5"/>
+                                    <GradientStop Color="#FF404040" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
                         </Border>
