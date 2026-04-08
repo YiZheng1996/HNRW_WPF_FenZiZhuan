@@ -104,10 +104,10 @@
             ════════════════════════════════════════ -->
             <Canvas Grid.Row="1" Panel.ZIndex="2">
 
-                <!-- ─── 区域图例卡片（右上角） ─── -->
-                <Border Canvas.Left="710" Canvas.Top="8"
-                        Width="70" Height="70"
-                        CornerRadius="10"
+                <!-- ─── 区域图例卡片（顶部居中） ─── -->
+                <Border Canvas.Left="300" Canvas.Top="5"
+                        Width="200" Height="60"
+                        CornerRadius="8"
                         BorderThickness="0.8"
                         BorderBrush="#28607898">
                     <Border.Background>
@@ -119,46 +119,46 @@
                     <Border.Effect>
                         <DropShadowEffect Color="#8090A8" BlurRadius="8" ShadowDepth="2" Opacity="0.18"/>
                     </Border.Effect>
-                    <StackPanel Margin="8,6,8,6" VerticalAlignment="Center">
+                    <StackPanel Margin="10,6,10,6" VerticalAlignment="Center">
                         <!-- 脱附区 -->
-                        <StackPanel Orientation="Horizontal" Margin="3,0,0,3">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
                             <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
                                 <Border.Background>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                        <GradientStop Color="#FFE53935" Offset="0"/>
-                                        <GradientStop Color="#FFD32F2F" Offset="1"/>
+                                        <GradientStop Color="#FFE08080" Offset="0"/>
+                                        <GradientStop Color="#FFC84040" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
                             </Border>
-                            <TextBlock Text="脱附区"
+                            <TextBlock Text="脱附区Desorption Zone"
                                        FontSize="7" VerticalAlignment="Center"
                                        Foreground="#2C3A4A"/>
                         </StackPanel>
                         <!-- 冷却区 -->
-                        <StackPanel Orientation="Horizontal" Margin="3,0,0,3">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
                             <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
                                 <Border.Background>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                        <GradientStop Color="#FF1976D2" Offset="0"/>
-                                        <GradientStop Color="#FF1565C0" Offset="1"/>
+                                        <GradientStop Color="#FF90C4E8" Offset="0"/>
+                                        <GradientStop Color="#FF60A8D0" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
                             </Border>
-                            <TextBlock Text="冷却区"
+                            <TextBlock Text="冷却区CoolingZone"
                                        FontSize="7" VerticalAlignment="Center"
                                        Foreground="#2C3A4A"/>
                         </StackPanel>
                         <!-- 吸附区 -->
-                        <StackPanel Orientation="Horizontal" Margin="3,0,0,0">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                             <Border Width="14" Height="10" CornerRadius="2" Margin="0,0,6,0">
                                 <Border.Background>
                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                        <GradientStop Color="#FFD7CCC8" Offset="0"/>
-                                        <GradientStop Color="#FFBCAAA4" Offset="1"/>
+                                        <GradientStop Color="#FFD0D0D0" Offset="0"/>
+                                        <GradientStop Color="#FFB0B0B0" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
                             </Border>
-                            <TextBlock Text="吸附区"
+                            <TextBlock Text="吸附区Adsorption Zone"
                                        FontSize="7" VerticalAlignment="Center"
                                        Foreground="#2C3A4A"/>
                         </StackPanel>
@@ -205,6 +205,110 @@
                                Foreground="#4E342E"/>
                 </Border>-->
 
+            </Canvas>
+
+            <!-- ═══════════════════════════════════════
+                 换热器图标 (Heat Exchanger) - 左侧
+            ════════════════════════════════════════ -->
+            <Canvas Grid.Row="1" Panel.ZIndex="2">
+                <!-- 外框 -->
+                <Border Canvas.Left="12" Canvas.Top="120" Width="82" Height="158"
+                        BorderThickness="1.5" CornerRadius="3">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF707070" Offset="0"/>
+                            <GradientStop Color="#FF909090" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                            <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Canvas>
+                        <!-- 盘管线条 (coil lines) -->
+                        <Path Canvas.Left="6" Canvas.Top="10" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="28" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="46" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="64" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="82" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="100" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="118" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                        <Path Canvas.Left="6" Canvas.Top="136" Stroke="#505050" StrokeThickness="1.5" Fill="Transparent"
+                              Data="M0,0 Q9,-7 18,0 Q27,7 36,0 Q45,-7 54,0 Q63,7 72,0"/>
+                    </Canvas>
+                </Border>
+                <!-- 标签 -->
+                <TextBlock Canvas.Left="18" Canvas.Top="283" Text="换热器"
+                           FontSize="8" FontWeight="SemiBold" Foreground="#1A2A4A"/>
+                <TextBlock Canvas.Left="10" Canvas.Top="295" Text="Heat Exchanger"
+                           FontSize="7" Foreground="#4A6A8A"/>
+            </Canvas>
+
+            <!-- ═══════════════════════════════════════
+                 过滤器图标 (Filter) - 右侧
+            ════════════════════════════════════════ -->
+            <Canvas Grid.Row="1" Panel.ZIndex="2">
+                <!-- 外框 -->
+                <Border Canvas.Left="697" Canvas.Top="328" Width="70" Height="72"
+                        BorderThickness="1.5" CornerRadius="3">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF707070" Offset="0"/>
+                            <GradientStop Color="#FF909090" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FFF8F8F8" Offset="0"/>
+                            <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Canvas>
+                        <!-- 竖条纹 (vertical filter lines) -->
+                        <Line X1="8"  Y1="4" X2="8"  Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="16" Y1="4" X2="16" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="24" Y1="4" X2="24" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="32" Y1="4" X2="32" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="40" Y1="4" X2="40" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="48" Y1="4" X2="48" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                        <Line X1="56" Y1="4" X2="56" Y2="66" Stroke="#707070" StrokeThickness="1.2"/>
+                    </Canvas>
+                </Border>
+                <!-- 标签 -->
+                <TextBlock Canvas.Left="707" Canvas.Top="405" Text="过滤器"
+                           FontSize="8" FontWeight="SemiBold" Foreground="#1A2A4A"/>
+                <TextBlock Canvas.Left="711" Canvas.Top="417" Text="Filter"
+                           FontSize="7" Foreground="#4A6A8A"/>
+            </Canvas>
+
+            <!-- ═══════════════════════════════════════
+                 设备标签 (Equipment Labels)
+            ════════════════════════════════════════ -->
+            <Canvas Grid.Row="1" Panel.ZIndex="3">
+                <!-- 脱附风机标签 (Desorption Fan) -->
+                <TextBlock Canvas.Left="392" Canvas.Top="172" Text="脱附风机"
+                           FontSize="8" FontWeight="SemiBold" Foreground="#1A2A4A"/>
+                <TextBlock Canvas.Left="385" Canvas.Top="183" Text="Desorption Fan"
+                           FontSize="7" Foreground="#4A6A8A"/>
+                <!-- 吸附风机标签 (Adsorption Fan) - 风机旁边 -->
+                <TextBlock Canvas.Left="325" Canvas.Top="354" Text="吸附风机"
+                           FontSize="8" FontWeight="SemiBold" Foreground="#1A2A4A"/>
+                <TextBlock Canvas.Left="318" Canvas.Top="365" Text="Adsorption Fan"
+                           FontSize="7" Foreground="#4A6A8A"/>
+                <!-- 分子筛转轮标签 (Zeolite Rotor) -->
+                <TextBlock Canvas.Left="467" Canvas.Top="394" Text="分子筛转轮"
+                           FontSize="8" FontWeight="SemiBold" Foreground="#1A2A4A"/>
+                <TextBlock Canvas.Left="466" Canvas.Top="405" Text="Zeolite Rotor"
+                           FontSize="7" Foreground="#4A6A8A"/>
             </Canvas>
 
             <Canvas Margin="31,301,526,10" Grid.Row="1"/>
@@ -439,25 +543,25 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFA8B4D4" Offset="0"/>
+                            <GradientStop Color="#FF9090C0" Offset="0.10"/>
+                            <GradientStop Color="#FFCCD4E8" Offset="0.28"/>
+                            <GradientStop Color="#FF9898C8" Offset="0.55"/>
+                            <GradientStop Color="#FF5870A8" Offset="0.82"/>
+                            <GradientStop Color="#FF485898" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border19" Margin="2" >
 
-                        <Line x:Name="liquidline19" 
+                        <Line x:Name="liquidline19"
                           Width="40"
                           Height="6"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#4870C0"
                           StrokeThickness="5" 
                           VerticalAlignment="Bottom" 
                           StrokeDashArray="2,3" 
@@ -561,25 +665,25 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFA8B4D4" Offset="0"/>
+                            <GradientStop Color="#FF9090C0" Offset="0.10"/>
+                            <GradientStop Color="#FFCCD4E8" Offset="0.28"/>
+                            <GradientStop Color="#FF9898C8" Offset="0.55"/>
+                            <GradientStop Color="#FF5870A8" Offset="0.82"/>
+                            <GradientStop Color="#FF485898" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border2" Margin="2" >
 
-                        <Line x:Name="liquidline2" 
+                        <Line x:Name="liquidline2"
                           Width="25"
                           Height="6"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#4870C0"
                           StrokeThickness="5" 
                           VerticalAlignment="Bottom" 
                           StrokeDashArray="2,3" 
@@ -626,23 +730,23 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFA8B4D4" Offset="0"/>
+                            <GradientStop Color="#FF9090C0" Offset="0.10"/>
+                            <GradientStop Color="#FFCCD4E8" Offset="0.28"/>
+                            <GradientStop Color="#FF9898C8" Offset="0.55"/>
+                            <GradientStop Color="#FF5870A8" Offset="0.82"/>
+                            <GradientStop Color="#FF485898" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border3" Margin="2" >
 
-                        <Line x:Name="liquidline3" 
-                          X1="0" Y1="0" 
-                          X2="{Binding ActualWidth, RelativeSource={RelativeSource Mode=Self}}" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                        <Line x:Name="liquidline3"
+                          X1="0" Y1="0"
+                          X2="{Binding ActualWidth, RelativeSource={RelativeSource Mode=Self}}"
+                          Y2="0"
+                          Stroke="#4870C0"
                           StrokeThickness="5" 
                           VerticalAlignment="Center" 
                           StrokeDashArray="2,3" 
@@ -722,24 +826,24 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border7" Margin="2" >
 
-                        <Line x:Name="liquidline7" 
+                        <Line x:Name="liquidline7"
                           Width="90"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
                           StrokeThickness="5" 
                           VerticalAlignment="Center" 
                           StrokeDashArray="2,3" 
@@ -768,25 +872,25 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border8" Margin="2" >
 
-                        <Line x:Name="liquidline8" 
+                        <Line x:Name="liquidline8"
                           Height="6"
                           Width="95"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
                           StrokeThickness="5" 
                           VerticalAlignment="Center" 
                           StrokeDashArray="2,3" 
@@ -900,77 +1004,41 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border9" Margin="2" >
 
-                        <Line x:Name="liquidline9" 
+                        <Line x:Name="liquidline9"
                           Width="217"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
-                          StrokeThickness="5" 
-                          VerticalAlignment="Center" 
-                          StrokeDashArray="2,3" 
-                          StrokeDashCap="Round" 
-                          StrokeStartLineCap="Round" 
-                          StrokeEndLineCap="Round" 
-                          Opacity="1.0" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
+                          StrokeThickness="5"
+                          VerticalAlignment="Center"
+                          StrokeDashArray="2,3"
+                          StrokeDashCap="Round"
+                          StrokeStartLineCap="Round"
+                          StrokeEndLineCap="Round"
+                          Opacity="1.0"
                           Stretch="Fill" Margin="8,0,0,0"/>
 
                     </Border>
 
                 </Border>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="657" Canvas.Top="100" RenderTransformOrigin="0.542,0.506" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform X="-1.008" Y="-0.12"/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="493" Canvas.Top="100" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="621" Canvas.Top="100" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="577" Canvas.Top="100" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
+                <!-- 红色左向箭头 (Red left-pointing arrows for desorption top-right circuit) -->
+                <Polygon Canvas.Left="657" Canvas.Top="100" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="493" Canvas.Top="100" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="621" Canvas.Top="100" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="577" Canvas.Top="100" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
 
             </Canvas>
 
@@ -1271,12 +1339,12 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
@@ -1285,73 +1353,29 @@
 
                         <Line x:Name="liquidline10"
                           Width="290"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
-                          StrokeThickness="5" 
-                          VerticalAlignment="Center" 
-                          StrokeDashArray="2,3" 
-                          StrokeDashCap="Round" 
-                          StrokeStartLineCap="Round" 
-                          StrokeEndLineCap="Triangle" 
-                          Opacity="0.85" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
+                          StrokeThickness="5"
+                          VerticalAlignment="Center"
+                          StrokeDashArray="2,3"
+                          StrokeDashCap="Round"
+                          StrokeStartLineCap="Round"
+                          StrokeEndLineCap="Triangle"
+                          Opacity="0.85"
                           Stretch="Fill" Margin="8,0,0,0"/>
 
                     </Border>
 
                 </Border>
 
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="337" Canvas.Top="101" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="290" Canvas.Top="101" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="242" Canvas.Top="101" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="185" Canvas.Top="101" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image Panel.ZIndex="0" Stretch="UniformToFill" Source="/Resources/右箭头.png" Width="12" Height="10" Canvas.Left="127" Canvas.Top="101" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
+                <!-- 红色左向箭头 (Red left-pointing arrows for desorption top-left circuit) -->
+                <Polygon Canvas.Left="337" Canvas.Top="101" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="290" Canvas.Top="101" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="242" Canvas.Top="101" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="185" Canvas.Top="101" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
+                <Polygon Canvas.Left="127" Canvas.Top="101" Points="12,0 0,5 12,10" Fill="#C84040" Panel.ZIndex="1"/>
             </Canvas>
             <Canvas>
                 <Border Margin="435,205,216,-173" RenderTransformOrigin="0.5,0.5" >
@@ -1367,24 +1391,24 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border5" Margin="2" >
 
-                        <Line x:Name="liquidline5" 
+                        <Line x:Name="liquidline5"
                           Width="100"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
                           StrokeThickness="5" 
                           VerticalAlignment="Center" 
                           StrokeDashArray="2,3" 
@@ -1460,25 +1484,25 @@
                     <Border.Background>
 
                         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#FFD0D4DA" Offset="0"/>
-                            <GradientStop Color="#FFC0C6CE" Offset="0.10"/>
-                            <GradientStop Color="#FFE8EAEE" Offset="0.28"/>
-                            <GradientStop Color="#FFC8CED6" Offset="0.55"/>
-                            <GradientStop Color="#FFA0A8B2" Offset="0.82"/>
-                            <GradientStop Color="#FF909098" Offset="1"/>
+                            <GradientStop Color="#FFD4A8A8" Offset="0"/>
+                            <GradientStop Color="#FFC09090" Offset="0.10"/>
+                            <GradientStop Color="#FFE8CCCC" Offset="0.28"/>
+                            <GradientStop Color="#FFC89898" Offset="0.55"/>
+                            <GradientStop Color="#FFA06060" Offset="0.82"/>
+                            <GradientStop Color="#FF905050" Offset="1"/>
                         </LinearGradientBrush>
 
                     </Border.Background>
 
                     <Border x:Name="border12" Margin="2" >
 
-                        <Line x:Name="liquidlin12" 
+                        <Line x:Name="liquidlin12"
                           Width="48"
                           Height="6"
-                          X1="0" Y1="0" 
-                          X2="360" 
-                          Y2="0" 
-                          Stroke="#6B8DA8" 
+                          X1="0" Y1="0"
+                          X2="360"
+                          Y2="0"
+                          Stroke="#C84040"
                           StrokeThickness="5" 
                           VerticalAlignment="Center" 
                           StrokeDashArray="2,3" 
