@@ -35,7 +35,7 @@
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="0"
            Fill="{StaticResource MainBackgroundBrush}"/>
 
-            <!-- 背景点阵纹理（工程图纸技术感）-->
+            <!-- 背景点阵纹理（工程图纸技术感）s-->
             <Rectangle Grid.RowSpan="2" Panel.ZIndex="1"
            IsHitTestVisible="False"
            Fill="{StaticResource ScanLineBrush}"
