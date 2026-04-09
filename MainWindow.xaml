@@ -15,7 +15,7 @@
 
     <WindowChrome.WindowChrome>
         <!--隐藏边框-->
-        <WindowChrome GlassFrameThickness="0"/>
+        <WindowChrome GlassFrameThickness="0" ResizeBorderThickness="0"/>
     </WindowChrome.WindowChrome>
     <Window.Resources>
         <!-- 加载图片资源 -->
@@ -23,23 +23,13 @@
         <BitmapImage x:Key="OffImage" UriSource="Resources/白色阀门.png"/>
     </Window.Resources>
     <Viewbox Stretch="Fill" StretchDirection="Both">
-        <Grid Cursor="Hand">
+        <Grid Cursor="Hand" Background="#FAF8F5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <!-- 标题行 -->
                 <RowDefinition Height="*"/>
                 <!-- 内容区域 -->
             </Grid.RowDefinitions>
-
-            <!-- 主背景：珍珠白径向渐变 --><!--
-            <Rectangle Grid.RowSpan="2" Panel.ZIndex="0"
-           Fill="{StaticResource MainBackgroundBrush}"/>-->
-
-            <!-- 背景点阵纹理（工程图纸技术感）s--><!--
-            <Rectangle Grid.RowSpan="2" Panel.ZIndex="1"
-           IsHitTestVisible="False"
-           Fill="{StaticResource ScanLineBrush}"
-           Opacity="1"/>-->
 
             <Image Grid.RowSpan="2" Panel.ZIndex="0" Stretch="UniformToFill" Source="Resources/Top and bottom frame.png" Width="800" Height="450" Opacity="0" Margin="4,4,-4,-4"/>
 

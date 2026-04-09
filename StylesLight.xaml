@@ -17,9 +17,9 @@
 
     <!-- 主背景：冷白径向渐变，中心略亮形成自然聚焦 -->
     <RadialGradientBrush x:Key="MainBackgroundBrush" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="1.0" RadiusY="1.0">
-        <GradientStop Color="#FFFFFFFF" Offset="0"/>
-        <GradientStop Color="#FFF7F7F7" Offset="0.6"/>
-        <GradientStop Color="#FFEFEFEF" Offset="1"/>
+        <GradientStop Color="#FAF8F5" Offset="0"/>
+        <GradientStop Color="#FAF8F5" Offset="0.6"/>
+        <GradientStop Color="#FAF8F5" Offset="1"/>
     </RadialGradientBrush>
 
 
