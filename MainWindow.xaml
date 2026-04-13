@@ -1437,7 +1437,7 @@
             <Canvas/>
 
             <Canvas>
-                <Border HorizontalAlignment="Left" Canvas.Left="110" Canvas.Top="51" VerticalAlignment="Top" >
+                <Border HorizontalAlignment="Left" Canvas.Left="110" Canvas.Top="70" VerticalAlignment="Top" >
                     <Border.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1553,7 +1553,7 @@
                 </Image>
             </Canvas>
             <Canvas>
-                <Path Stroke="#7E7E7E" StrokeThickness="1"   Data="M71.4,27.7c0,1.6-2,2.9-4.5,2.9l0,0c-2.5,0-4.5-1.3-4.5-2.9v-12.7c0-1.6,2-2.9,4.5-2.9l0,0 c2.5,0,4.5,1.3,4.5,2.9V27.7z" HorizontalAlignment="Left" Width="11" Stretch="Fill" Canvas.Left="100" Canvas.Top="35.475" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Center">
+                <Path Stroke="#7E7E7E" StrokeThickness="1"   Data="M71.4,27.7c0,1.6-2,2.9-4.5,2.9l0,0c-2.5,0-4.5-1.3-4.5-2.9v-12.7c0-1.6,2-2.9,4.5-2.9l0,0 c2.5,0,4.5,1.3,4.5,2.9V27.7z" HorizontalAlignment="Left" Width="11" Stretch="Fill" Canvas.Left="100" Canvas.Top="55" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Center" Cursor="">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

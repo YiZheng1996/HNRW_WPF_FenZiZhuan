@@ -22,7 +22,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-
         // 订阅SourceInitialized事件
         this.SourceInitialized += MainWindow_SourceInitialized;
 
@@ -40,7 +39,7 @@ public partial class MainWindow : Window
     private void MainWindow_SourceInitialized(object sender, EventArgs e)
     {
         // 将窗口状态改为Normal
-        this.WindowState = WindowState.Normal;
+        this.WindowState = WindowState.Maximized;
 
         // 获取工作区（不包括任务栏的区域）
         Rect workArea = SystemParameters.WorkArea;
